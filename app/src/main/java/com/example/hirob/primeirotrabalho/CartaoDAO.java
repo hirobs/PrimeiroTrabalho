@@ -27,9 +27,10 @@ public class CartaoDAO {
         Cursor cursor = db.query(Cartao.TABLE_NAME, null, null, null, null, null, null);
         while (cursor.moveToNext()) {
             String name = cursor.getString(cursor.getColumnIndex(Cartao.COLUMN_NAME_NAME));
-            String email = cursor.getString(cursor.getColumnIndex(Cartao.COLUMN_NAME_EMAIL));
-            String phone = cursor.getString(cursor.getColumnIndex(Cartao.COLUMN_NAME_PHONE));
-            Cartoes.add(new Cartao(name, email, phone));
+            String vencimento = cursor.getString(cursor.getColumnIndex(Cartao.COLUMN_NAME_VENCIMENTO));
+            String limite = cursor.getString(cursor.getColumnIndex(Cartao.COLUMN_NAME_LIMITE));
+            String bandeira = cursor.getString(cursor.getColumnIndex(Cartao.COLUMN_NAME_BANDEIRA));
+            Cartoes.add(new Cartao(name, vencimento, limite, bandeira));
             names.add(name);
         }
         cursor.close();
@@ -38,41 +39,42 @@ public class CartaoDAO {
     public void insert(Cartao Cartao) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(Cartao.COLUMN_NAME_NAME, Cartao.getName());
-        values.put(Cartao.COLUMN_NAME_EMAIL, Cartao.getEmail());
-        values.put(Cartao.COLUMN_NAME_PHONE, Cartao.getPhone());
+        values.put(Cartao.COLUMN_NAME_NAME, Cartao.getNome());
+        values.put(Cartao.COLUMN_NAME_VENCIMENTO, Cartao.getVencimento());
+        values.put(Cartao.COLUMN_NAME_LIMITE, Cartao.getLimite());
+        values.put(Cartao.COLUMN_NAME_BANDEIRA, Cartao.getBandeira());
         db.insert(Cartao.TABLE_NAME, null, values);
         Cartoes.add(Cartao);
-        names.add(Cartao.getName());
+        names.add(Cartao.getNome());
     }
 
-    public void update(Cartao Cartao) {
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
-        ContentValues values = new ContentValues();
+//    public void update(Cartao Cartao) {
+//        SQLiteDatabase db = dbHelper.getReadableDatabase();
+//        ContentValues values = new ContentValues();
+//
+//        values.put(Cartao.COLUMN_NAME_NAME, Cartao.getName());
+//        values.put(Cartao.COLUMN_NAME_EMAIL, Cartao.getEmail());
+//        values.put(Cartao.COLUMN_NAME_PHONE, Cartao.getPhone());
+//
+//        String selection = Cartao.COLUMN_NAME_NAME + " = ? ";
+//        String[] selectionArgs = {Cartao.getName()};
+//
+//        db.update(Cartao.TABLE_NAME, values, selection, selectionArgs);
+//
+//        Cartao c = getByName(Cartao.getName());
+//        c.setName(Cartao.getName());
+//        c.setEmail(Cartao.getEmail());
+//        c.setPhone(Cartao.getPhone());
+//    }
 
-        values.put(Cartao.COLUMN_NAME_NAME, Cartao.getName());
-        values.put(Cartao.COLUMN_NAME_EMAIL, Cartao.getEmail());
-        values.put(Cartao.COLUMN_NAME_PHONE, Cartao.getPhone());
-
-        String selection = Cartao.COLUMN_NAME_NAME + " = ? ";
-        String[] selectionArgs = {Cartao.getName()};
-
-        db.update(Cartao.TABLE_NAME, values, selection, selectionArgs);
-
-        Cartao c = getByName(Cartao.getName());
-        c.setName(Cartao.getName());
-        c.setEmail(Cartao.getEmail());
-        c.setPhone(Cartao.getPhone());
-    }
-
-    public void delete(Cartao Cartao) {
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-        String selection = Cartao.COLUMN_NAME_NAME + " = ?";
-        String[] selectionArgs = {Cartao.getName()};
-        db.delete(Cartao.TABLE_NAME, selection, selectionArgs);
-        Cartoes.remove(Cartao);
-        names.remove(Cartao.getName());
-    }
+//    public void delete(Cartao Cartao) {
+//        SQLiteDatabase db = dbHelper.getWritableDatabase();
+//        String selection = Cartao.COLUMN_NAME_NAME + " = ?";
+//        String[] selectionArgs = {Cartao.getName()};
+//        db.delete(Cartao.TABLE_NAME, selection, selectionArgs);
+//        Cartoes.remove(Cartao);
+//        names.remove(Cartao.getName());
+//    }
 
     public Boolean CartaoExist(String name) {
         return getByName(name) != null;
@@ -80,7 +82,7 @@ public class CartaoDAO {
 
     public Cartao getByName(String name) {
         for (Cartao Cartao : Cartoes) {
-            if (Cartao.getName().equals(name)) {
+            if (Cartao.getNome().equals(name)) {
                 return Cartao;
             }
         }

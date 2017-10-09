@@ -16,6 +16,13 @@ public class Cartao {
     static final String COLUMN_NAME_BANDEIRA = "bandeira";
     static final String COLUMN_NAME_VENCIMENTO = "vencimento";
 
+    Cartao(String nome, String vencimento, String limite, String bandeira){
+        setNome(nome);
+        setVencimento(vencimento);
+        setLimite(limite);
+        setBandeira(bandeira);
+    }
+
 
     public String getNome() {
         return nome;
