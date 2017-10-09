@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\hirob\.android\build-cache\4511274a1ee1ed821cbcd06e022aa5c9224b23ed\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\Users\hirob\TrabalhoAndroid1\PrimeiroTrabalho\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_22281bdcac6032e372227d15e3f2fe4716ed4d8e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hirob\.android\build-cache\ed3fa0a4b144a66ed21ff478877d68398d399518\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\Users\hirob\TrabalhoAndroid1\PrimeiroTrabalho\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_17cec0e50bd84d641c56a6181fc6b718139d9987\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hirob\.android\build-cache\633b066403e13698c708b4d2026e9839f53f247c\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="C:\Users\hirob\TrabalhoAndroid1\PrimeiroTrabalho\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6de90cfd9af743de91a97c38b00543853071bdc2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Users\hirob\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="C:\Users\hirob\TrabalhoAndroid1\PrimeiroTrabalho\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-26.0.0-alpha1_74696487f640084effeb55290f101ee923c7e3f0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hirob\.android\build-cache\2352835fc53277404aeba2d01472d2297c560281\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\Users\hirob\TrabalhoAndroid1\PrimeiroTrabalho\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1d89351530335aeb866bee6dd6e0dc0d264b36ff\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hirob\TrabalhoAndroid1\PrimeiroTrabalho\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\hirob\TrabalhoAndroid1\PrimeiroTrabalho\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_a4f5ddcf7062595c1d3376c3ecd2640aa288da03\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hirob\.android\build-cache\8daf216836b6ac30ce66942618d7ab49eb072c50\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\hirob\TrabalhoAndroid1\PrimeiroTrabalho\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0921246300dd1c089396921e18826ea20474164f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hirob\.android\build-cache\63b74c6636019037bca838f301b498d3e23a5cf3\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\Users\hirob\TrabalhoAndroid1\PrimeiroTrabalho\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e1e9c9cb615bc5230f41c12825b5b2f5800691e1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hirob\.android\build-cache\63e0e694d1fbe6f59330a3c0ed95a92a5f847836\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="C:\Users\hirob\TrabalhoAndroid1\PrimeiroTrabalho\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7f9c1a5af17602ad31e59bb52cb2548beb27c7eb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hirob\.android\build-cache\c38ce0f16f3bbf0847f960b704c0a612396732ce\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\Users\hirob\TrabalhoAndroid1\PrimeiroTrabalho\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d2d6e5837570506be5166ef8b3033f993d61046e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hirob\TrabalhoAndroid1\PrimeiroTrabalho\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="65bd6dd82d11de0239a9e17f46fd8de31bb5267c">
+        <dex dex="C:\Users\hirob\TrabalhoAndroid1\PrimeiroTrabalho\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_2a3f81b5976978ee03bdff3ad53b531c5c15f46a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hirob\.android\build-cache\8054e7b4ed025edb64c6117ffc578237c4590081\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\hirob\TrabalhoAndroid1\PrimeiroTrabalho\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_56af05cc7753ff07cf36d7caddc465c2ecbc679e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hirob\.android\build-cache\956e9e87882d7dd51401a26ff68cb5248bd5aef2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="C:\Users\hirob\TrabalhoAndroid1\PrimeiroTrabalho\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9ba4d67e680ca92104a89093b301e303ec217f68\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Users\hirob\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\hirob\TrabalhoAndroid1\PrimeiroTrabalho\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_201c858d4416edef5f0a7317b46b2695538ce374\classes.dex" />
+    </item>
+
+</items>
