@@ -23,6 +23,8 @@ public class Cartao {
         setBandeira(bandeira);
     }
 
+    public Cartao() {
+    }
 
     public String getNome() {
         return nome;

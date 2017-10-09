@@ -14,12 +14,13 @@ import java.util.Set;
 public class Main3Activity extends AppCompatActivity {
     ListView lista;
     Cartao cartao;
+    CartaoDAO cartaoDAO;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-
+        cartaoDAO = new CartaoDAO(this);
         // Primeira coisa que precisamos fazer e buscar a intenção da nossa activity, pois é dentro dela que temos nossos parametros.
         Intent it = getIntent();
 
@@ -37,16 +38,25 @@ public class Main3Activity extends AppCompatActivity {
         cartao.setNome(nome);
 
         //ArrayList listaCartao = retrieveContactList();
-        ArrayList<Cartao> listaCartao= new ArrayList<>();
-        listaCartao.add(cartao);
+        ArrayList<Cartao> listaCartao;
+        //listaCartao.add(cartao);
+
+        cartaoDAO.insert(cartao);
+        listaCartao = (ArrayList)cartaoDAO.getLista();
+
+
+
+
+
+
+
+
 
         ArrayList<String> listaString = arrumarLista(listaCartao);
-        //StableArrayAdapter adapter = new StableArrayADapter
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,listaString);
 
-        lista.setAdapter(adapter);
+      lista.setAdapter(adapter);
 
-        //lista.setAdapter(adapter);
     }
 
     //Salvando

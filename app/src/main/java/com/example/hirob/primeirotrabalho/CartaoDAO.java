@@ -4,25 +4,26 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CartaoDAO {
     private DBHelper dbHelper;
-    private List<Cartao> Cartoes;
+    private List<Cartao> cartoes;
     public List<String> names;
 
     public CartaoDAO(Context context) {
         dbHelper = new DBHelper(context);
-        Cartoes = new ArrayList<>();
+        cartoes = new ArrayList<>();
         names = new ArrayList<>();
         load();
     }
 
     public void load() {
         names.clear();
-        Cartoes.clear();
+        cartoes.clear();
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.query(Cartao.TABLE_NAME, null, null, null, null, null, null);
         while (cursor.moveToNext()) {
@@ -30,22 +31,24 @@ public class CartaoDAO {
             String vencimento = cursor.getString(cursor.getColumnIndex(Cartao.COLUMN_NAME_VENCIMENTO));
             String limite = cursor.getString(cursor.getColumnIndex(Cartao.COLUMN_NAME_LIMITE));
             String bandeira = cursor.getString(cursor.getColumnIndex(Cartao.COLUMN_NAME_BANDEIRA));
-            Cartoes.add(new Cartao(name, vencimento, limite, bandeira));
+            cartoes.add(new Cartao(name, vencimento, limite, bandeira));
             names.add(name);
         }
         cursor.close();
     }
 
-    public void insert(Cartao Cartao) {
+    public void insert(Cartao cartao) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(Cartao.COLUMN_NAME_NAME, Cartao.getNome());
-        values.put(Cartao.COLUMN_NAME_VENCIMENTO, Cartao.getVencimento());
-        values.put(Cartao.COLUMN_NAME_LIMITE, Cartao.getLimite());
-        values.put(Cartao.COLUMN_NAME_BANDEIRA, Cartao.getBandeira());
-        db.insert(Cartao.TABLE_NAME, null, values);
-        Cartoes.add(Cartao);
-        names.add(Cartao.getNome());
+        values.put(Cartao.COLUMN_NAME_NAME, cartao.getNome());
+        values.put(Cartao.COLUMN_NAME_VENCIMENTO, cartao.getVencimento());
+        values.put(Cartao.COLUMN_NAME_LIMITE, cartao.getLimite());
+        values.put(Cartao.COLUMN_NAME_BANDEIRA, cartao.getBandeira());
+        db.insert("cartao", null, values);
+
+        //db.inse
+        cartoes.add(cartao);
+        names.add(cartao.getNome());
     }
 
 //    public void update(Cartao Cartao) {
@@ -72,7 +75,7 @@ public class CartaoDAO {
 //        String selection = Cartao.COLUMN_NAME_NAME + " = ?";
 //        String[] selectionArgs = {Cartao.getName()};
 //        db.delete(Cartao.TABLE_NAME, selection, selectionArgs);
-//        Cartoes.remove(Cartao);
+//        cartoes.remove(Cartao);
 //        names.remove(Cartao.getName());
 //    }
 
@@ -81,7 +84,7 @@ public class CartaoDAO {
     }
 
     public Cartao getByName(String name) {
-        for (Cartao Cartao : Cartoes) {
+        for (Cartao Cartao : cartoes) {
             if (Cartao.getNome().equals(name)) {
                 return Cartao;
             }
@@ -90,6 +93,10 @@ public class CartaoDAO {
     }
 
     public int size() {
-        return Cartoes.size();
+        return cartoes.size();
+    }
+
+    public List<Cartao> getLista(){
+        return cartoes;
     }
 }
